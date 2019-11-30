@@ -1,0 +1,5 @@
+*, *::before, *::after {
+  background-color: #09d3ac;
+  margin: 0;
+  padding: 0;
+}
