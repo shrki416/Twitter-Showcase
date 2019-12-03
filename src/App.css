@@ -1,5 +1,105 @@
+/* twitter colors 
+HEX: #38A1F3
+RGB(56, 161, 243)
+*/
+
+/* Twitter Fonts 
+Windows:  Helvetica
+macOS:    Helvetica Neue
+iOS:      San Francisco
+Android:  Roboto
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
 *, *::before, *::after {
-  background-color: #09d3ac;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #1e272e;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+}
+
+header {
+  background: #38A1F3;
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+nav ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  color: #00aced;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+nav li:hover {
+  color: #999;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+/* Navbar */

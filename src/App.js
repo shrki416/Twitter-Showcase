@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 
+import Navbar from './Navbar';
+
 function App() {
   return (
     <div>
-      <h2>Twitter Showcase App!</h2>
+      <Navbar />
     </div>
   );
 }
