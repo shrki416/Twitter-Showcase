@@ -35,6 +35,10 @@ body {
   cursor: pointer;
 }
 
+.header p:hover {
+  color: #000;
+}
+
 .cover {
   background-image: url(../src/assets/twtr_unsplash.jpg);
   height: 90vh;
