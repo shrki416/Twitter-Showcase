@@ -4,9 +4,12 @@ export default function Home() {
   return (
     <div className="container">
       <div className="header">
-          <p>Home</p>
-          <p>Page 1</p>
-          <p>Page 2</p>
+        <p>
+          <i className="fab fa-twitter-square"></i>
+        </p>
+        <p>Home</p>
+        <p>Page 1</p>
+        <p>Page 2</p>
       </div>
       <div className="cover">
         <h1>Twitter Showcase</h1>
