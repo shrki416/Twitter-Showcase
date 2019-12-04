@@ -11,6 +11,7 @@ Android:  Roboto
 */
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -18,88 +19,60 @@ Android:  Roboto
 
 body {
   margin: 0;
-  background: #1e272e;
-  font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
-}
-
-header {
-  background: #38A1F3;
-  text-align: center;
-  position: fixed;
-  width: 100vw;
-  z-index: 999;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
-
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  display: none;
-}
-
-nav ul {
-  margin: 0;
   padding: 0;
-  list-style: none;
+  font-family: 'Inconsolata', sans-serif;
 }
 
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-  color: #00aced;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+.container { 
+  display: grid;
+  padding: 0; 
 }
 
-nav li:hover {
-  color: #999;
+.header { 
+  background: #38A1F3;
+  color: #fff;
+  padding: 8px 24px; 
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 10vh;
 }
 
-.nav-toggle:checked ~ nav {
-  display: block;
+.header p {
+  margin: 0;
+  grid-row: 1;
+  justify-content: space-between;
+  font-size: 3em;
+  font-family: 'Nova Flat';
+  cursor: pointer;
 }
 
-/* Navbar */
+.cover {
+  background-image: url(../src/assets/twtr_unsplash.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-content: center;
+  justify-content: right;
+}
+
+.cover h1 {
+  font-family: 'Nova Flat'; 
+  background: rgb(0, 0, 0, 0.80);
+  color: #38A1F3;
+  padding: 16px ;
+  margin: 0px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.cover p {
+  font-size: 18px;
+  background: #fff;
+  color: #38A1F3;
+  padding:16px;
+  margin: 0px;
+  max-width: 500px;
+}
