@@ -43,7 +43,6 @@ body {
   background-image: url(../src/assets/twtr_unsplash.jpg);
   height: 90vh;
   background-size: cover;
-  background-position: center;
   display: grid;
   align-content: center;
   justify-content: right;
