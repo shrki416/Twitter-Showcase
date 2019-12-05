@@ -16,26 +16,29 @@ body {
   padding: 0; 
 }
 
-.header { 
-  background: #38A1F3;
-  color: #fff;
+nav {
   padding: 8px 24px; 
   display: grid;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
+  background: #38A1F3;
+  color: #fff;
   height: 10vh;
 }
 
-.header p {
+/* .nav-links {
   margin: 0;
+  display: grid;
   grid-row: 1;
   justify-content: space-between;
+  align-items: center;
   font-size: 3em;
   font-family: 'Nova Flat';
   cursor: pointer;
-}
+  list-style: none;
+} */
 
-.header p:hover {
+nav a:hover {
   color: #000;
 }
 
