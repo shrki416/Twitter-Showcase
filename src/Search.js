@@ -1,16 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import "./Search.css";
+import Navbar from './Navbar';
 
 function Search() {
     return (
-        <div>
-            <h1>User Search Page</h1>
-            <Link to="/">
-                <button>Home</button>
-            </Link>
-        </div>
-    )
+      <>
+        <Navbar />
+        <h1>Search Tweet Page</h1>
+      </>
+    );
 }
 
 export default Search

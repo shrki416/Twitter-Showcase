@@ -1,15 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Random.css';
+import Navbar from './Navbar';
 
 function Random() {
     return (
-      <div>
+      <>
+        <Navbar />
         <h1>Random Tweet Page</h1>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-      </div>
+      </>
     );
 }
 

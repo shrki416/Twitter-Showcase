@@ -1,26 +1,11 @@
 import React from "react";
-import "./Home.css";
-import { Link } from 'react-router-dom';
+import "./App.css";
+import Navbar from "./Navbar";
 
 export default function Home() {
   return (
     <div className="container">
-      <nav>
-        <ul>
-          <li>
-            <i className="fab fa-twitter-square"></i>
-          </li>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/search">
-            <li>Search</li>
-          </Link>
-          <Link to="/random">
-            <li>Random</li>
-          </Link>
-        </ul>
-      </nav>
+      <Navbar />
       <div className="cover">
         <h1>Twitter Showcase</h1>
         <p>
