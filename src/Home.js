@@ -10,7 +10,7 @@ export default function Home() {
         <h1>Twitter Showcase</h1>
         <p>
           Allows users to search for tweets using a twitter username or by tweet
-          content from the last week.
+          content from last week.
         </p>
       </div>
     </div>

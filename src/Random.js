@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './Navbar';
+import './Random.css';
 
 function Random() {
     return (
       <>
         <Navbar />
-        <h1>Random Tweet Page</h1>
+        <section className="random-container">
+          <h1 className="random-header">Random Tweet Page</h1>
+        </section>
       </>
     );
 }

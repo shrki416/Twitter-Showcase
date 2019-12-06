@@ -1,0 +1,14 @@
+.random-container {
+    display: grid; 
+}
+
+.random-header {
+    text-align: center;
+    background-color: rgb(192, 222, 237);
+    margin: 0;
+    padding-top: 10px;
+    height: 50px;
+}
+
+
+
