@@ -1,14 +1,22 @@
 .random-container {
-    display: grid; 
+    /* display: grid; */
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #ee6352;
+    font-size: 1.125em;
+    font-family: "Nova Flat";
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
 }
 
 .random-header {
     text-align: center;
-    background-color: rgb(192, 222, 237);
+    /* background-color: var(--dark); */
     margin: 0;
     padding-top: 10px;
-    height: 50px;
+    height: 2em;
+    /* color: var(--light); */
+    font-weight: lighter;
+    line-height: 1.25em;
 }
-
-
-
