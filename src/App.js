@@ -18,3 +18,8 @@ function App() {
 }
 
 export default App;
+
+/*
+API_Key = 27BVFGMRua0RLELLJRnlPgOoY
+API_Secret_Key = PzZkHa0vvsLLnaFoBKiyyUkt4onwami74D17ETQmEAzxerFKNp
+*/

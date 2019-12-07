@@ -14,11 +14,13 @@ function Random() {
         <Navbar />
         <h1 className="random-header">Random Tweet Page</h1>
         <section className="random-container">
-          <img src={MLB} alt="MLB logo" />
-          <img src={NHL} alt="NHL logo" />
-          <img src={NFL} alt="NFL logo" />
-          <img src={MLS} alt="MLS lgoo" />
-          <img src={NBA} alt="NBA logo" />
+          <img 
+            onClick={() => alert('clicked!')} 
+            className="random-img" src={MLB} alt="MLB logo" />
+          <img className="random-img" src={NHL} alt="NHL logo" />
+          <img className="random-img" src={NBA} alt="NBA logo" />
+          <img className="random-img" src={MLS} alt="MLS lgoo" />
+          <img className="random-img" src={NFL} alt="NFL logo" />
         </section>
       </>
     );
