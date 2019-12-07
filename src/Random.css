@@ -2,7 +2,6 @@
     /* display: grid; */
     max-width: 900px;
     margin: 2rem auto;
-    background: #ee6352;
     font-size: 1.125em;
     font-family: "Nova Flat";
     padding: 40px;
@@ -19,4 +18,13 @@
     /* color: var(--light); */
     font-weight: lighter;
     line-height: 1.25em;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.grid-item {
+    display: grid;
 }
