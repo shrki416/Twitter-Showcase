@@ -17,14 +17,41 @@ function Random() {
     return (
       <>
         <Navbar />
-        <h1 className="random-header">Random Tweet Page</h1>
-        <section className="random-container">
-          <img onClick={handleClick} className="random-img" src={MLB} alt="MLB-Logo" />
-          <img onClick={handleClick} className="random-img" src={NHL} alt="NHL-Logo" />
-          <img onClick={handleClick} className="random-img" src={NBA} alt="NBA-Logo" />
-          <img onClick={handleClick} className="random-img" src={MLS} alt="MLS-Logo" />
-          <img onClick={handleClick} className="random-img" src={NFL} alt="NFL-Logo" />
-        </section>
+        <div className="random-container">
+          <h1 className="random-header">Random Tweet Page</h1>
+          <section className="random-section">
+            <img
+              onClick={handleClick}
+              className="random-img"
+              src={MLB}
+              alt="MLB-Logo"
+            />
+            <img
+              onClick={handleClick}
+              className="random-img"
+              src={NHL}
+              alt="NHL-Logo"
+            />
+            <img
+              onClick={handleClick}
+              className="random-img"
+              src={NBA}
+              alt="NBA-Logo"
+            />
+            <img
+              onClick={handleClick}
+              className="random-img"
+              src={MLS}
+              alt="MLS-Logo"
+            />
+            <img
+              onClick={handleClick}
+              className="random-img"
+              src={NFL}
+              alt="NFL-Logo"
+            />
+          </section>
+        </div>
       </>
     );
 }

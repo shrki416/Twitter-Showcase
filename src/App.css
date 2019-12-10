@@ -48,7 +48,7 @@ body {
 }
 
 .cover {
-  background-image: url(../src/assets/twtr_unsplash.jpg);
+  background-image: url(../src/assets/twitter-2.jpg);
   height: 90vh;
   background-size: cover;
   display: grid;

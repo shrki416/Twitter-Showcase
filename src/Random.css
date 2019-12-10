@@ -1,4 +1,19 @@
+.random-header {
+    text-align: center;
+    margin: 0;
+    height: 2em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
 .random-container {
+  background: url(./assets/twitter-1.png);
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+}
+
+.random-section {
     display: grid;
     grid: repeat(1, 200px) / auto-flow 225px;
     grid-auto-rows: auto;
@@ -9,17 +24,8 @@
     align-items: center;
 }
 
-.random-container > img {
+.random-section > img {
     max-width: 150px;
     max-height: 150px;
-}
-
-.random-header {
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
-    height: 2em;
-    font-weight: lighter;
-    line-height: 1.25em;
 }
 
