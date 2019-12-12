@@ -1,4 +1,3 @@
 # TWITTER SHOWCASE 
-## Twitter Showcase
 
 ***
