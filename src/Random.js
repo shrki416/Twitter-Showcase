@@ -10,9 +10,7 @@ const NBA = require('./assets/NBA.png')
 
 function Random() {
   
-  function handleClick(e) {
-    alert(`${e.target.alt} was clicked!`)
-  }
+  function handleClick(e) { alert(`${e.target.alt} was clicked!`) }
 
     return (
       <>
