@@ -1,15 +1,15 @@
-const express   = require("express");
-const axios     = require('axios');
-const path      = require('path');
+const express = require("express");
+const axios = require("axios");
+const path = require("path");
 
-require('dotenv').config();
+require("dotenv").config();
 const API_KEY = process.env.API_KEY;
 const API_SECRET_KEY = process.env.API_SECRET_KEY;
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 // app.get("/", (req, res) => res.send("Hello World!"));
 
