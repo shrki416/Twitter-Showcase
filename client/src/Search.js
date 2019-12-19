@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./Search.css";
 
-function Search() {
+const Search = () => {
   return (
     <>
       <Navbar />
@@ -20,6 +20,6 @@ function Search() {
       </div>
     </>
   );
-}
+};
 
 export default Search;

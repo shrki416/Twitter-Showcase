@@ -13,8 +13,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/search", (req, res) => {
-  const url =
-    "https://api.twitter.com/1.1/search/tweets.json?q=nfl&result_type=popular";
+  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nfl&result_type=popular`;
 
   const config = {
     headers: {
@@ -23,11 +22,11 @@ app.get("/api/search", (req, res) => {
   };
   axios
     .get(url, config)
-    .then(res => {
-      console.log(res);
+    .then(response => {
+      res.send(response.data.statuses);
     })
     .catch(err => {
-      console.log(err);
+      console.log(`Something went wrong: ${err}`);
     });
 });
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import axios from "axios";
 import "./Random.css";
 
 const MLB = require("./assets/MLB.png");
@@ -8,10 +9,13 @@ const NFL = require("./assets/NFL.png");
 const MLS = require("./assets/MLS.png");
 const NBA = require("./assets/NBA.png");
 
-function Random() {
-  function handleClick(e) {
-    alert(`${e.target.alt} is clicked!`);
-  }
+//http://api.github.com/users/shrki416
+
+const Random = () => {
+  const handleClick = e => {
+    const user = e.target.alt;
+    console.log(user);
+  };
 
   return (
     <>
@@ -53,6 +57,6 @@ function Random() {
       </div>
     </>
   );
-}
+};
 
 export default Random;

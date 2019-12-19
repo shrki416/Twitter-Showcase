@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="container">
       <Navbar />
@@ -15,4 +15,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
