@@ -9,8 +9,6 @@ const NFL = require("./assets/NFL.png");
 const MLS = require("./assets/MLS.png");
 const NBA = require("./assets/NBA.png");
 
-//http://api.github.com/users/shrki416
-
 const Random = () => {
   const handleClick = e => {
     const user = e.target.alt;
