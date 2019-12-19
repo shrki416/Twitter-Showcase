@@ -12,7 +12,7 @@ const port = 3000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get("/search", (req, res) => {
+app.get("/api/search", (req, res) => {
   const url =
     "https://api.twitter.com/1.1/search/tweets.json?q=nfl&result_type=popular";
 
