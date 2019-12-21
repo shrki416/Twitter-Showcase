@@ -55,7 +55,7 @@ body {
 .fa-twitter-square {
   display: inline-block;
   margin: 10px;
-  color: var(--light);
+  color: var(--dark);
 }
 
 .navbar-toggle {
