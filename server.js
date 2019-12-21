@@ -8,7 +8,7 @@ const API_SECRET_KEY = process.env.API_SECRET_KEY;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -23,7 +23,7 @@ app.get("/api/search", (req, res) => {
   axios
     .get(url, config)
     .then(response => {
-      res.send(response.data.statuses);
+      console.log(response);
     })
     .catch(err => {
       console.log(`Something went wrong: ${err}`);

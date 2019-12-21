@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nova+Flat');
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nova+Flat");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-  --primary: #38A1F3;
+  --primary: #38a1f3;
   --light: #fff;
   --dark: #000;
   --background: #d2dae2;
@@ -15,36 +17,96 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: "Inconsolata", sans-serif;
   background: var(--background);
 }
 
-.container { 
+.container {
   display: grid;
 }
 
-.main-nav ul {
+.navbar {
+  font-family: "Nova Flat";
+  font-size: 2rem;
   background: var(--primary);
-  display: grid;
-  grid-gap: 10px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 5px;
   height: 10vh;
-  justify-items: center;
-  align-items: center;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
 }
 
 .main-nav a {
-  color: var(--light);
-  font-family: "Nova Flat";
   text-decoration: none;
-  font-size: 2.5rem;
+  color: var(--light);
 }
 
 .main-nav a:hover {
   color: var(--dark);
+  font-size: 2.25rem;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.fa-twitter-square {
+  display: inline-block;
+  margin: 10px;
+  color: var(--light);
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--dark);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .main-nav a {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links:hover {
+    color: var(--dark);
+  }
 }
 
 .cover {
@@ -57,10 +119,10 @@ body {
 }
 
 .cover h1 {
-  font-family: 'Nova Flat'; 
-  background: rgb(0, 0, 0, 0.80);
+  font-family: "Nova Flat";
+  background: rgb(0, 0, 0, 0.8);
   color: var(--primary);
-  padding: 16px ;
+  padding: 16px;
   margin: 0px;
   width: 100%;
   max-width: 500px;
@@ -71,7 +133,7 @@ body {
   font-size: 18px;
   background: var(--light);
   color: var(--primary);
-  padding:16px;
+  padding: 16px;
   margin: 0px;
   max-width: 500px;
 }
