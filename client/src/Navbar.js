@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const collapsed = () => {
-    let mainNav = document.getElementById("js-menu");
-    let navBarToggle = document.getElementById("js-navbar-toggle");
-    navBarToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("active");
+    let dropDownMenu = document.getElementById("dropDownMenu");
+    let navbarToggle = document.getElementById("js-navbar-toggle");
+    navbarToggle.addEventListener("click", () => {
+      dropDownMenu.classList.toggle("active");
     });
   };
 
@@ -19,7 +19,7 @@ export default function Navbar() {
 
       <i className="fab fa-twitter-square fa-2x"></i>
 
-      <ul className="main-nav" id="js-menu">
+      <ul className="main-nav" id="dropDownMenu">
         <Link to="/">
           <li>Home</li>
         </Link>
