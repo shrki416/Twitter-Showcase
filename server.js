@@ -23,10 +23,12 @@ app.get("/api/search", (req, res) => {
   axios
     .get(url, config)
     .then(response => {
-      console.log(response);
+      res.send(response.data);
+      console.log("data sent");
     })
-    .catch(err => {
+    .catch(error => {
       console.log(`Something went wrong: ${err}`);
+      res.sendStatus(500);
     });
 });
 
