@@ -28,7 +28,7 @@ app.get("/anything", (req, res) => {
     .get(url, config)
     .then(response => {
       res.send(response.data);
-      console.log("data sent!");
+      console.log(response.data.statuses[1].text);
     })
     .catch(error => {
       console.log(`Something went wrong: ${error}`);
