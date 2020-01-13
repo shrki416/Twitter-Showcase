@@ -16,7 +16,7 @@ app.get("/api/test", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.get("/anything", (req, res) => {
+app.get("/api/search", (req, res) => {
   const url = `https://api.twitter.com/1.1/search/tweets.json?q=nfl&result_type=popular`;
 
   const config = {
@@ -28,7 +28,9 @@ app.get("/anything", (req, res) => {
     .get(url, config)
     .then(response => {
       res.send(response.data);
-      console.log(response.data.statuses[1].text);
+      console.log(response.data.statuses[0].text);
+      console.log(response.data.statuses[0].retweet_count);
+      console.log(response.data.statuses[0].favorite_count);
     })
     .catch(error => {
       console.log(`Something went wrong: ${error}`);
