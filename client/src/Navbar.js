@@ -17,7 +17,9 @@ export default function Navbar() {
         <i className="fas fa-bars fa-2x" onClick={collapsed}></i>
       </span>
 
-      <i className="fab fa-twitter-square fa-2x"></i>
+      <a href="https://twitter.com">
+        <i className="fab fa-twitter-square fa-2x"></i>
+      </a>
 
       <ul className="main-nav" id="dropDownMenu">
         <Link to="/">
