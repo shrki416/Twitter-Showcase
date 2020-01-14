@@ -17,7 +17,7 @@ app.get("/api/test", (req, res) => {
 });
 
 app.get("/api/search", (req, res) => {
-  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nfl&result_type=popular`;
+  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nfl&count=5`;
 
   const config = {
     headers: {

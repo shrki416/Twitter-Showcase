@@ -1,8 +1,18 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "./Search.css";
+import axios from "axios";
 
 const Search = () => {
+  axios
+    .get("/api/search")
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+
   return (
     <>
       <Navbar />
