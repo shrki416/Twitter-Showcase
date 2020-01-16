@@ -1,21 +1,22 @@
-import React from "react";
-import axios from "axios";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./Home";
 import Search from "./Search";
 import Random from "./Random";
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/random" component={Random} />
-      </Switch>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/random" component={Random} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 
 export default App;
