@@ -8,6 +8,9 @@ const Search = () => {
     .get("/api/search")
     .then(response => {
       console.log(response.data);
+      console.log(`Tweet: ${response.data.statuses[1].text}`);
+      console.log(`Fav Count: ${response.data.statuses[1].favorite_count}`);
+      console.log(`Retweet Count: ${response.data.statuses[1].retweet_count}`);
     })
     .catch(error => {
       console.log(error);

@@ -28,9 +28,9 @@ app.get("/api/search", (req, res) => {
     .get(url, config)
     .then(response => {
       res.send(response.data);
-      console.log(response.data.statuses[0].text);
-      console.log(response.data.statuses[0].retweet_count);
-      console.log(response.data.statuses[0].favorite_count);
+      console.log(`Tweet: ${response.data.statuses[0].text}`);
+      console.log(`Retweet: ${response.data.statuses[0].retweet_count}`);
+      console.log(`Favorite: ${response.data.statuses[0].favorite_count}`);
     })
     .catch(error => {
       console.log(`Something went wrong: ${error}`);
