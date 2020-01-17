@@ -4,29 +4,10 @@ import "./Search.css";
 import axios from "axios";
 
 class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      tweets: []
-    };
-  }
-
-  componentDidMount() {
-    axios
-      .get("/api/search")
-      .then(response => {
-        this.setState({ tweets: response.data });
-        const tweets = [response.data.statuses];
-        // console.log(this.state.tweets);
-        // console.log(`Tweet: ${response.data.statuses[1].text}`);
-        // console.log(`Fav_Count: ${response.data.statuses[1].favorite_count}`);
-        // console.log(`RT_Count: ${response.data.statuses[1].retweet_count}`);
-        console.log(tweets);
-      })
-      .catch(error => {
-        console.log(`Something is wrong: ${error}`);
-      });
+    console.log(this.props.tweets);
   }
 
   render() {
