@@ -17,10 +17,12 @@ class Search extends Component {
       .get("/api/search")
       .then(response => {
         this.setState({ tweets: response.data });
-        console.log(this.state.tweets);
-        console.log(`Tweet: ${response.data.statuses[1].text}`);
-        console.log(`Fav_Count: ${response.data.statuses[1].favorite_count}`);
-        console.log(`RT_Count: ${response.data.statuses[1].retweet_count}`);
+        const tweets = [response.data.statuses];
+        // console.log(this.state.tweets);
+        // console.log(`Tweet: ${response.data.statuses[1].text}`);
+        // console.log(`Fav_Count: ${response.data.statuses[1].favorite_count}`);
+        // console.log(`RT_Count: ${response.data.statuses[1].retweet_count}`);
+        console.log(tweets);
       })
       .catch(error => {
         console.log(`Something is wrong: ${error}`);
