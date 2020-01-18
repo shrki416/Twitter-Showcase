@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <span className="navbar-toggle" id="js-navbar-toggle">
-        <i className="fas fa-bars fa-2x" onClick={collapsed}></i>
+        <i className="fas fa-bars fa-2x" onClick={collapsed()}></i>
       </span>
 
       <a href="https://twitter.com">

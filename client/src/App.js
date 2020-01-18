@@ -34,7 +34,12 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/search" component={Search} tweets={this.tweets} />
+          <Route
+            exact
+            path="/search"
+            component={Search}
+            tweets={this.state.tweets}
+          />
           <Route exact path="/random" component={Random} />
         </Switch>
       </Router>

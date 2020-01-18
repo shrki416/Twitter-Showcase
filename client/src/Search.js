@@ -7,8 +7,22 @@ class Search extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props.tweets);
+    this.state = {
+      user: []
+    };
+
+    console.log(props.tweets);
   }
+
+  handleClick = e => {
+    e.preventDefault();
+    console.log("clicked!");
+  };
+
+  handleChange = e => {
+    const name = e.target.value;
+    console.log(name);
+  };
 
   render() {
     return (
@@ -18,9 +32,13 @@ class Search extends Component {
           <h1 className="search-header">Search Tweet Page</h1>
           <div className="search-page">
             <form className="form">
-              <input type="text" placeholder="Enter a twitter username" />
+              <input
+                type="text"
+                placeholder="Enter a twitter username"
+                onChange={this.handleChange}
+              />
               <input type="text" placeholder="Topic" />
-              <button>
+              <button onClick={this.handleClick}>
                 Search <i className="fab fa-twitter"></i>
               </button>
             </form>
