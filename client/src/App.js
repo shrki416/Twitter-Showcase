@@ -21,8 +21,8 @@ class App extends Component {
       .then(response => {
         this.setState({ tweets: response.data });
         const tweets = response.data.statuses;
-        console.log(this.state.tweets);
-        console.log(tweets);
+        // console.log(this.state.tweets);
+        // console.log(tweets);
       })
       .catch(error => {
         console.log(`Something is wrong: ${error}`);
@@ -31,18 +31,23 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            exact
-            path="/search"
-            component={Search}
-            tweets={this.state.tweets}
-          />
-          <Route exact path="/random" component={Random} />
-        </Switch>
-      </Router>
+      <>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              exact
+              path="/search"
+              render={props => <Search tweets={this.state.tweets} {...props} />}
+            />
+            <Route
+              exact
+              path="/random"
+              render={props => <Random tweets={this.state.tweets} {...props} />}
+            />
+          </Switch>
+        </Router>
+      </>
     );
   }
 }

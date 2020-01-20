@@ -3,7 +3,7 @@ import "./App.css";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const collapsed = () => {
+  const toggle = () => {
     let dropDownMenu = document.getElementById("dropDownMenu");
     let navbarToggle = document.getElementById("js-navbar-toggle");
     navbarToggle.addEventListener("click", () => {
@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <span className="navbar-toggle" id="js-navbar-toggle">
-        <i className="fas fa-bars fa-2x" onClick={collapsed()}></i>
+        <i className="fas fa-bars fa-3x" onClick={toggle}></i>
       </span>
 
       <a href="https://twitter.com">
