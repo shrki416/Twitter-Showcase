@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
 import "./Search.css";
 import axios from "axios";
 
@@ -28,8 +29,8 @@ class Search extends Component {
   render() {
     return (
       <>
-        <Navbar />
         <div className="search-container">
+          <Header />
           <h1 className="search-header">Search Tweet Page</h1>
           <p className="search-header-p">
             Search twitter by either a twitter-handle or a topic
@@ -47,6 +48,7 @@ class Search extends Component {
               </button>
             </form>
           </div>
+          {/* <Footer /> */}
         </div>
       </>
     );

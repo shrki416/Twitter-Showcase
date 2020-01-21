@@ -19,6 +19,7 @@ body {
   padding: 0;
   font-family: "Inconsolata", sans-serif;
   background: var(--background);
+  min-height: 100vh;
 }
 
 .container {
@@ -111,7 +112,7 @@ body {
 
 .cover {
   background-image: url(../src/assets/twitter-2.jpg);
-  height: 90vh;
+  height: 80vh;
   background-size: cover;
   display: grid;
   align-content: center;
@@ -136,4 +137,20 @@ body {
   padding: 16px;
   margin: 0px;
   max-width: 500px;
+}
+
+.footer {
+  background-color: var(--primary);
+  text-align: center;
+  font-family: "Nova Flat", sans-serif;
+  height: 10vh;
+}
+
+.fab {
+  padding: 5px 10px;
+}
+
+.fab:hover {
+  cursor: pointer;
+  color: var(--light);
 }

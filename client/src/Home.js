@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
     <div className="container">
-      <Navbar />
+      <Header />
       <div className="cover">
         <h1>Twitter Showcase</h1>
         <p>
@@ -13,6 +14,7 @@ const Home = () => {
           content from last week.
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

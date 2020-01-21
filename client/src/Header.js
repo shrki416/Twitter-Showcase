@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Header() {
   const toggle = () => {
     let dropDownMenu = document.getElementById("dropDownMenu");
     let navbarToggle = document.getElementById("js-navbar-toggle");

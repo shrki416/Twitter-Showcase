@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
 import axios from "axios";
 import "./Random.css";
 
@@ -26,8 +27,8 @@ class Random extends Component {
   render() {
     return (
       <>
-        <Navbar />
         <div className="random-container">
+          <Header />
           <h1 className="random-header">Random Tweet Page</h1>
           <p className="random-header-p">
             Click on the logo below to view a randomly selected tweet
@@ -64,6 +65,7 @@ class Random extends Component {
               alt="NFL-Logo"
             />
           </section>
+          {/* <Footer /> */}
         </div>
       </>
     );
