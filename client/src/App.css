@@ -72,7 +72,7 @@ body {
   line-height: 0.75em;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .navbar {
     display: flex;
     justify-content: space-between;

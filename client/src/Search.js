@@ -21,6 +21,7 @@ class Search extends Component {
 
   handleChange = e => {
     const name = e.target.value;
+    this.setState({ name });
     console.log(name);
   };
 
@@ -30,6 +31,9 @@ class Search extends Component {
         <Navbar />
         <div className="search-container">
           <h1 className="search-header">Search Tweet Page</h1>
+          <p className="search-header-p">
+            Search twitter by either a twitter-handle or a topic
+          </p>
           <div className="search-page">
             <form className="form">
               <input

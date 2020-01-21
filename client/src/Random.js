@@ -29,6 +29,9 @@ class Random extends Component {
         <Navbar />
         <div className="random-container">
           <h1 className="random-header">Random Tweet Page</h1>
+          <p className="random-header-p">
+            Click on the logo below to view a randomly selected tweet
+          </p>
           <section className="random-section">
             <img
               onClick={handleClick}

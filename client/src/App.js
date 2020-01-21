@@ -20,9 +20,7 @@ class App extends Component {
       .get("/api/search")
       .then(response => {
         this.setState({ tweets: response.data });
-        const tweets = response.data.statuses;
-        // console.log(this.state.tweets);
-        // console.log(tweets);
+        // const tweets = response.data.statuses;
       })
       .catch(error => {
         console.log(`Something is wrong: ${error}`);

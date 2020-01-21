@@ -1,15 +1,23 @@
 .search-header {
-    text-align: center;
-    margin: 0;
-    height: 2em;
-    font-weight: 400;
-    line-height: 1.5em;
-    color: var(--light);
+  text-align: center;
+  margin: 0;
+  height: 2em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--light);
+  font-family: "Nova Flat", sans-serif;
+}
+
+.search-header-p {
+  font-family: "Inconsolata", sans-serif;
+  color: var(--light);
+  font-size: 1.125em;
+  text-align: center;
 }
 
 .search-page {
   width: 400px;
-  padding: 10% 0 0;
+  padding: 5% 0 0;
   margin: auto;
 }
 
@@ -47,7 +55,9 @@
   cursor: pointer;
 }
 
-.form button:hover, .form button:active, .form button:focus {
+.form button:hover,
+.form button:active,
+.form button:focus {
   color: var(--primary);
   background: var(--light);
   border: 1px solid var(--primary);
