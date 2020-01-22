@@ -152,5 +152,5 @@ body {
 
 .fab:hover {
   cursor: pointer;
-  color: var(--light);
+  color: var(--background);
 }

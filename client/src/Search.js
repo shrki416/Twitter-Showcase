@@ -9,10 +9,11 @@ class Search extends Component {
     super(props);
 
     this.state = {
-      user: []
+      user: [],
+      tweets: props.tweets
     };
 
-    console.log(props.tweets);
+    // console.log(props.tweets);
   }
 
   handleClick = e => {
@@ -27,6 +28,13 @@ class Search extends Component {
   };
 
   render() {
+    let { tweets } = this.state;
+    const tweetData = tweets.statuses;
+
+    console.log(tweets.statuses);
+    console.log(tweetData[0].id);
+    console.log(tweetData[0].text);
+
     return (
       <>
         <div className="search-container">
@@ -48,7 +56,13 @@ class Search extends Component {
               </button>
             </form>
           </div>
-          {/* <Footer /> */}
+          <div className="tweet-card">
+            <ul>
+              {tweetData.map(tweet => (
+                <li key={tweet.id}>{tweet.text}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </>
     );
