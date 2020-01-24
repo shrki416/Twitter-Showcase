@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Header from "./Header";
-import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
           content from last week.
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
 import "./Search.css";
 import axios from "axios";
 

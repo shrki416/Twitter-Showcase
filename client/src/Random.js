@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
 import axios from "axios";
 import "./Random.css";
 
@@ -65,7 +64,6 @@ class Random extends Component {
               alt="NFL-Logo"
             />
           </section>
-          {/* <Footer /> */}
         </div>
       </>
     );
