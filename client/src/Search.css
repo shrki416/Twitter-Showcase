@@ -13,6 +13,8 @@
   color: var(--light);
   font-size: 1.125em;
   text-align: center;
+  margin: 0;
+  padding: 1em;
 }
 
 .search-page {

@@ -3,6 +3,18 @@ import Header from "./Header";
 import "./Search.css";
 import axios from "axios";
 
+// function createTweetCard() {
+//   return(
+//     <Tweet
+//       key={tweet.id}
+//       name={statuses.text}
+//       img={statuses.img}
+//       retweet={statuses.retweet_count}
+//       favorite={statuses.favorite_count}
+//     />
+//   )
+// }
+
 class Search extends Component {
   constructor(props) {
     super(props);
