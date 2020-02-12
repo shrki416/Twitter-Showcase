@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+const Header = () => {
   const toggle = () => {
     let dropDownMenu = document.getElementById("dropDownMenu");
     let navbarToggle = document.getElementById("js-navbar-toggle");
@@ -14,13 +14,12 @@ export default function Header() {
   return (
     <nav className="navbar">
       <span className="navbar-toggle" id="js-navbar-toggle">
-        <i className="fas fa-bars fa-3x" onClick={toggle}></i>
+        <i className="fas fa-bars fa-2x" onClick={toggle}></i>
       </span>
 
       <a href="https://twitter.com">
         <i className="fab fa-twitter-square fa-2x"></i>
       </a>
-
       <ul className="main-nav" id="dropDownMenu">
         <Link to="/">
           <li>Home</li>
@@ -34,4 +33,6 @@ export default function Header() {
       </ul>
     </nav>
   );
-}
+};
+
+export default Header;

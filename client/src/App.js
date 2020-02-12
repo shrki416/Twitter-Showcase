@@ -15,19 +15,6 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    axios
-      .get("/api/search")
-      .then(response => {
-        this.setState({ tweets: response.data });
-        const tweets = response.data.statuses;
-        console.log(tweets);
-      })
-      .catch(error => {
-        console.log(`Something is wrong: ${error}`);
-      });
-  }
-
   render() {
     return (
       <>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import "./Search.css";
 import axios from "axios";
-
+import Tweet from "./Tweet";
 // function createTweetCard() {
 //   return(
 //     <Tweet
@@ -14,22 +14,27 @@ import axios from "axios";
 //     />
 //   )
 // }
-
 class Search extends Component {
-  constructor(props) {
-    super(props);
-
+  constructor() {
+    super();
     this.state = {
       user: [],
-      tweets: props.tweets
+      tweets: []
     };
-
     // console.log(props.tweets);
   }
 
   handleClick = e => {
     e.preventDefault();
     console.log("clicked!");
+    axios
+      .get("/api/search?username=" + e.target.value)
+      .then(response => {
+        this.setState({ tweets: response.data });
+      })
+      .catch(error => {
+        console.log(`Something is wrong: ${error}`);
+      });
   };
 
   handleChange = e => {
@@ -40,12 +45,10 @@ class Search extends Component {
 
   render() {
     let { tweets } = this.state;
-    const tweetData = tweets.statuses;
-
-    console.log(tweets.statuses);
-    console.log(tweetData[0].id);
-    console.log(tweetData[0].text);
-
+    const tweetData = tweets.statuses || [];
+    //console.log(tweets.statuses);
+    //console.log(tweetData[0].id);
+    //console.log(tweetData[0].text);
     return (
       <>
         <div className="search-container">
@@ -79,5 +82,4 @@ class Search extends Component {
     );
   }
 }
-
 export default Search;
