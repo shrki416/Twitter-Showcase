@@ -3,17 +3,7 @@ import Header from "./Header";
 import "./Search.css";
 import axios from "axios";
 import Tweet from "./Tweet";
-// function createTweetCard() {
-//   return(
-//     <Tweet
-//       key={tweet.id}
-//       name={statuses.text}
-//       img={statuses.img}
-//       retweet={statuses.retweet_count}
-//       favorite={statuses.favorite_count}
-//     />
-//   )
-// }
+
 class Search extends Component {
   constructor() {
     super();
@@ -21,12 +11,10 @@ class Search extends Component {
       user: [],
       tweets: []
     };
-    // console.log(props.tweets);
   }
 
   handleClick = e => {
     e.preventDefault();
-    console.log("clicked!");
     axios
       .get("/api/search?username=" + e.target.value)
       .then(response => {
@@ -46,9 +34,9 @@ class Search extends Component {
   render() {
     let { tweets } = this.state;
     const tweetData = tweets.statuses || [];
-    //console.log(tweets.statuses);
-    //console.log(tweetData[0].id);
-    //console.log(tweetData[0].text);
+
+    console.log(tweetData);
+
     return (
       <>
         <div className="search-container">
@@ -64,19 +52,18 @@ class Search extends Component {
                 placeholder="Enter a twitter username"
                 onChange={this.handleChange}
               />
-              <input type="text" placeholder="Topic" />
               <button onClick={this.handleClick}>
                 Search <i className="fab fa-twitter"></i>
               </button>
             </form>
           </div>
-          <div className="tweet-card">
-            <ul>
-              {tweetData.map(tweet => (
-                <li key={tweet.id}>{tweet.text}</li>
-              ))}
-            </ul>
-          </div>
+          {tweetData.map(tweet => (
+            <Tweet
+              key={tweet.id}
+              text={tweet.text}
+              retweet={tweet.retweet_count}
+            />
+          ))}
         </div>
       </>
     );
