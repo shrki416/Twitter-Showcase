@@ -60,8 +60,13 @@ class Search extends Component {
           {tweetData.map(tweet => (
             <Tweet
               key={tweet.id}
+              created={tweet.created_at}
+              img={tweet.user.profile_image_url}
+              name={tweet.user.name}
+              screen_name={tweet.user.screen_name}
               text={tweet.text}
               retweet={tweet.retweet_count}
+              favorite={tweet.favorite_count}
             />
           ))}
         </div>

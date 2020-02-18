@@ -25,6 +25,7 @@ app.get("/api/search", (req, res) => {
     .then(response => {
       res.send(response.data);
       console.log(`Tweet: ${response.data.statuses[0].text}`);
+      console.log(`Created: ${response.data.statuses[0].created_at}`);
       console.log(`Retweet: ${response.data.statuses[0].retweet_count}`);
       console.log(`Favorite: ${response.data.statuses[0].favorite_count}`);
     })

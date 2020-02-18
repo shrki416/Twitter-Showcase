@@ -2,24 +2,21 @@ import React from "react";
 import "./Tweet.css";
 
 function Tweet(props) {
-  const img = "http://pbs.twimg.com/media/EQnjBz7U4AA6YLM.jpg ";
-
   return (
     <div className="card">
-      <div className="top">
-        <h3 className="name">Name</h3>
-        <h4>{props.created_at}</h4>
-        <img className="circle-img" src={img} alt="user-image" />
-      </div>
-      <div className="bottom">
-        <p>{props.text}</p>
-        <p className="info">
-          <i className="fas fa-retweet">{props.retweet_count}</i>
-        </p>
-        <p className="info">
-          <i className="fas fa-heart">{props.favorite_count}</i>
-        </p>
-      </div>
+      <h4>{props.name}</h4>
+      <h5>@{props.screen_name}</h5>
+      <h6>{props.created}</h6>
+      <img className="circle-img" src={props.img} alt="user-image" />
+      <p>{props.text}</p>
+      <p>
+        <i className="fas fa-retweet"></i>
+        {props.retweet}
+      </p>
+      <p>
+        <i className="fas fa-heart"></i>
+        {props.favorite}
+      </p>
     </div>
   );
 }
