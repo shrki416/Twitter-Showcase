@@ -1,33 +1,46 @@
 .card {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   width: 80%;
   max-width: 400px;
-  display: flex;
-  flex-direction: row;
-  background-color: var(--light);
+  background-color: #dcdde1;
   color: var(--primary);
   text-align: left;
-  padding: 1em;
+  padding: 10px;
+  margin: 0.75em auto;
+  display: grid;
+  grid-auto-rows: auto;
+  border-radius: 5px;
 }
 
-.profile-position {
-  margin: 0;
-  color: var(--dark);
-}
-
-.profile-body {
-  margin-bottom: 0;
+.profile-sidebar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile-image {
   border-radius: 50%;
-  border: 3px solid var(--dark);
+  border: 2px solid var(--dark);
+}
+
+.tweet-body {
+  margin: 5px;
+}
+
+.user-name {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family: "Nova Flat";
+}
+
+.user-screen-name,
+.tweet-time-stamp {
+  margin: 0;
+  color: var(--dark);
 }
 
 .tweet-stats {
   display: flex;
   justify-content: space-around;
-  width: 80px;
-  margin: 0 auto;
   color: var(--primary);
+  width: 100px;
 }

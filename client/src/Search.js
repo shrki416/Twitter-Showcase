@@ -35,7 +35,18 @@ class Search extends Component {
     let { tweets } = this.state;
     const tweetData = tweets.statuses || [];
 
-    console.log(tweetData);
+    let displayTweetCards = tweetData.map(tweet => (
+      <Tweet
+        key={tweet.id}
+        created={tweet.created_at}
+        img={tweet.user.profile_image_url}
+        name={tweet.user.name}
+        screen_name={tweet.user.screen_name}
+        text={tweet.text}
+        retweet={tweet.retweet_count}
+        favorite={tweet.favorite_count}
+      />
+    ));
 
     return (
       <>
@@ -57,18 +68,7 @@ class Search extends Component {
               </button>
             </form>
           </div>
-          {tweetData.map(tweet => (
-            <Tweet
-              key={tweet.id}
-              created={tweet.created_at}
-              img={tweet.user.profile_image_url}
-              name={tweet.user.name}
-              screen_name={tweet.user.screen_name}
-              text={tweet.text}
-              retweet={tweet.retweet_count}
-              favorite={tweet.favorite_count}
-            />
-          ))}
+          <div className="tweet-card">{displayTweetCards}</div>
         </div>
       </>
     );
