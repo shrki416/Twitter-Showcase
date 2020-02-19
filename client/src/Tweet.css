@@ -1,8 +1,9 @@
 .card {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   width: 80%;
   max-width: 400px;
-  background-color: #dcdde1;
+  background-color: #222f3e;
+  border: 3px solid var(--primary);
   color: var(--primary);
   text-align: left;
   padding: 10px;
@@ -35,12 +36,12 @@
 .user-screen-name,
 .tweet-time-stamp {
   margin: 0;
-  color: var(--dark);
+  color: var(--light);
 }
 
 .tweet-stats {
   display: flex;
   justify-content: space-around;
   color: var(--primary);
-  width: 100px;
+  width: 125px;
 }

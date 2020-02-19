@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/search", (req, res) => {
-  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nfl&count=6`;
+  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nhl&count=6&result_type=popular`;
 
   const config = {
     headers: {
@@ -24,10 +24,6 @@ app.get("/api/search", (req, res) => {
     .get(url, config)
     .then(response => {
       res.send(response.data);
-      console.log(`Tweet: ${response.data.statuses[0].text}`);
-      console.log(`Created: ${response.data.statuses[0].created_at}`);
-      console.log(`Retweet: ${response.data.statuses[0].retweet_count}`);
-      console.log(`Favorite: ${response.data.statuses[0].favorite_count}`);
     })
     .catch(error => {
       console.log(`Something went wrong: ${error}`);

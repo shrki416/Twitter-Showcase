@@ -17,6 +17,7 @@ class Search extends Component {
     e.preventDefault();
     axios
       .get("/api/search?username=" + e.target.value)
+      // .get("/api/search?username=" + e.target.value)
       .then(response => {
         this.setState({ tweets: response.data });
       })
