@@ -1,9 +1,9 @@
 .card {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(56, 161, 243, 0.4);
   width: 80%;
   max-width: 400px;
   background-color: #222f3e;
-  border: 3px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
   text-align: left;
   padding: 10px;

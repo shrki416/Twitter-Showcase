@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tweet.css";
 
-function Tweet(props) {
+const Tweet = props => {
   return (
     <div className="card">
       <div className="profile-sidebar">
@@ -23,6 +23,6 @@ function Tweet(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Tweet;
