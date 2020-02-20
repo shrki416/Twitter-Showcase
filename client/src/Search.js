@@ -17,7 +17,7 @@ class Search extends Component {
   handleClick = e => {
     e.preventDefault();
     axios
-      .get("/api/search?search_term=" + this.state.searchTerm)
+      .get(`/api/search?search_term=${this.state.searchTerm}`)
       .then(response => {
         this.setState({ tweets: response.data });
       })
