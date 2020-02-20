@@ -9,15 +9,15 @@ class Search extends Component {
     super();
     this.state = {
       user: [],
-      tweets: []
+      tweets: [],
+      searchTerm: ""
     };
   }
 
   handleClick = e => {
     e.preventDefault();
     axios
-      .get("/api/search?username=" + e.target.value)
-      // .get("/api/search?username=" + e.target.value)
+      .get("/api/search?search_term=" + this.state.searchTerm)
       .then(response => {
         this.setState({ tweets: response.data });
       })
@@ -27,9 +27,7 @@ class Search extends Component {
   };
 
   handleChange = e => {
-    const name = e.target.value;
-    this.setState({ name });
-    console.log(name);
+    this.setState({ searchTerm: e.target.value });
   };
 
   render() {

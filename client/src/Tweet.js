@@ -2,6 +2,9 @@ import React from "react";
 import "./Tweet.css";
 
 const Tweet = props => {
+  const date = new Date(props.created);
+  const newDateFormat = Intl.DateTimeFormat("en-US").format(date);
+
   return (
     <div className="card">
       <div className="profile-sidebar">
@@ -10,7 +13,7 @@ const Tweet = props => {
       <div className="tweet-body">
         <h2 className="user-name">{props.name}</h2>
         <p className="user-screen-name">@{props.screen_name}</p>
-        <p className="tweet-time-stamp">{props.created}</p>
+        <p className="tweet-time-stamp">{newDateFormat}</p>
         <p className="tweet-text">{props.text}</p>
         <div className="tweet-stats">
           <p>

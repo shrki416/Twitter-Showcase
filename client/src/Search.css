@@ -30,13 +30,10 @@
 }
 
 .form {
-  position: relative;
-  z-index: 1;
   background: var(--light);
   max-width: 400px;
-  padding: 45px;
+  padding: 50px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .form input {

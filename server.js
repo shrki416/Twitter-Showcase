@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/search", (req, res) => {
-  const url = `https://api.twitter.com/1.1/search/tweets.json?q=nhl&count=6&result_type=popular`;
+  const url = `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.search_term}&count=6&result_type=mixed`;
 
   const config = {
     headers: {
