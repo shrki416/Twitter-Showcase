@@ -3,7 +3,13 @@ import "./Tweet.css";
 
 const Tweet = props => {
   const date = new Date(props.created);
+
+  const options = {
+    hour: "numeric",
+    minute: "numeric"
+  };
   const newDateFormat = Intl.DateTimeFormat("en-US").format(date);
+  const newTimeFormat = Intl.DateTimeFormat("en-US", options).format(date);
 
   return (
     <div className="card">
@@ -13,7 +19,9 @@ const Tweet = props => {
       <div className="tweet-body">
         <h2 className="user-name">{props.name}</h2>
         <p className="user-screen-name">@{props.screen_name}</p>
-        <p className="tweet-time-stamp">{newDateFormat}</p>
+        <p className="tweet-time-stamp">
+          {newDateFormat} - {newTimeFormat}
+        </p>
         <p className="tweet-text">{props.text}</p>
         <div className="tweet-stats">
           <p>
