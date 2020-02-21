@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/shrki416/Twitter-Showcase#readme",
   "dependencies": {
+    "@material-ui/core": "^4.9.3",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "path": "^0.12.7"

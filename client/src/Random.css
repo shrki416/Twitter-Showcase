@@ -17,4 +17,18 @@
   font-family: "Inconsolata", sans-serif;
   font-size: 1.125em;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.screen-name {
+  text-align: center;
+  font-size: 400;
+  font-family: "Nova Flat", sans-serif;
 }
