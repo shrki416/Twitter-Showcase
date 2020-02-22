@@ -9,10 +9,7 @@ import axios from "axios";
 import "./Random.css";
 
 const Random = () => {
-  const [user, setUser] = useState({
-    username: "",
-    image: ""
-  });
+  const [screenName, setScreenName] = useState("");
 
   const iconStyle = {
     color: "var(--primary)",
@@ -20,6 +17,23 @@ const Random = () => {
     border: "2px solid var(--primary)",
     borderRadius: "10px",
     margin: "2%"
+  };
+
+  const handleClick = e => {
+    e.preventDefault();
+    const { name } = e.target;
+
+    setScreenName({ screenName: name });
+
+    axios
+      .get(`/api/random?screen_name=${screenName}`)
+      .then(response => {
+        setScreenName({ screenName: response.data });
+      })
+      .catch(error => {
+        console.log(`Something is wrong: ${error}`);
+      });
+    console.log(screenName);
   };
 
   return (
@@ -34,24 +48,42 @@ const Random = () => {
           <div>
             <SportsBaseballIcon style={iconStyle} />
             <p className="screen-name">@MLB</p>
+            <button name="mlb" onClick={handleClick}>
+              Search Tweets
+            </button>
           </div>
           <div>
             <SportsBasketballIcon style={iconStyle} />
             <p className="screen-name">@NBA</p>
+            <button name="nba" onClick={handleClick}>
+              Search Tweets
+            </button>
           </div>
           <div>
             <SportsSoccerIcon style={iconStyle} />
             <p className="screen-name">@MLS</p>
+            <button name="mls" onClick={handleClick}>
+              Search Tweets
+            </button>
           </div>
           <div>
             <SportsFootballIcon style={iconStyle} />
             <p className="screen-name">@NFL</p>
+            <button name="nfl" onClick={handleClick}>
+              Search Tweets
+            </button>
           </div>
           <div>
             <SportsHockeyIcon style={iconStyle} />
             <p className="screen-name">@NHL</p>
+            <button name="nhl" onClick={handleClick}>
+              Search Tweets
+            </button>
           </div>
         </section>
+        <div className="tweet-card">
+          <p>Tweets go here</p>
+        </div>
       </div>
     </>
   );
