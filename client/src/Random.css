@@ -34,7 +34,7 @@ section {
   font-family: "Nova Flat", sans-serif;
 }
 
-button {
+#random-btn {
   font-family: "Nova Flat", sans-serif;
   background: var(--primary);
   width: 100%;
@@ -48,9 +48,9 @@ button {
   cursor: pointer;
 }
 
-button:active,
-button:hover,
-button:focus {
+#random-btn:active,
+#random-btn:hover,
+#random-btn:focus {
   color: var(--primary);
   background: var(--light);
   border: 1px solid var(--primary);

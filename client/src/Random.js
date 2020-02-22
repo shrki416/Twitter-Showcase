@@ -48,35 +48,35 @@ const Random = () => {
           <div>
             <SportsBaseballIcon style={iconStyle} />
             <p className="screen-name">@MLB</p>
-            <button name="mlb" onClick={handleClick}>
+            <button id="random-btn" name="mlb" onClick={handleClick}>
               Search Tweets
             </button>
           </div>
           <div>
             <SportsBasketballIcon style={iconStyle} />
             <p className="screen-name">@NBA</p>
-            <button name="nba" onClick={handleClick}>
+            <button id="random-btn" name="nba" onClick={handleClick}>
               Search Tweets
             </button>
           </div>
           <div>
             <SportsSoccerIcon style={iconStyle} />
             <p className="screen-name">@MLS</p>
-            <button name="mls" onClick={handleClick}>
+            <button id="random-btn" name="mls" onClick={handleClick}>
               Search Tweets
             </button>
           </div>
           <div>
             <SportsFootballIcon style={iconStyle} />
             <p className="screen-name">@NFL</p>
-            <button name="nfl" onClick={handleClick}>
+            <button id="random-btn" name="nfl" onClick={handleClick}>
               Search Tweets
             </button>
           </div>
           <div>
             <SportsHockeyIcon style={iconStyle} />
             <p className="screen-name">@NHL</p>
-            <button name="nhl" onClick={handleClick}>
+            <button id="random-btn" name="nhl" onClick={handleClick}>
               Search Tweets
             </button>
           </div>
