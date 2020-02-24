@@ -1,19 +1,20 @@
 .random-container {
-  background-color: #f9faf5;
+  background-color: #222f3e;
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
+
 .random-header {
   color: var(--primary);
   text-align: center;
   line-height: 1.5em;
   margin: 0;
-  font-weight: 400;
   font-family: "Nova Flat", sans-serif;
 }
 
 .random-header-p {
-  color: var(--dark);
+  color: var(--primary);
   font-family: "Inconsolata", sans-serif;
   font-size: 1.125em;
   text-align: center;
@@ -32,6 +33,7 @@ section {
   text-align: center;
   font-size: 400;
   font-family: "Nova Flat", sans-serif;
+  color: var(--light);
 }
 
 #random-btn {
@@ -39,9 +41,9 @@ section {
   background: var(--primary);
   width: 100%;
   border: 0;
-  border-radius: 7px;
+  border-radius: 5px;
   padding: 5px;
-  color: var(--light);
+  color: var(--dark);
   font-size: 12px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
@@ -52,6 +54,6 @@ section {
 #random-btn:hover,
 #random-btn:focus {
   color: var(--primary);
-  background: var(--light);
+  background: #222f3e;
   border: 1px solid var(--primary);
 }

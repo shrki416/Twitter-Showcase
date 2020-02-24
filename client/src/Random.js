@@ -5,11 +5,12 @@ import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
 import SportsHockeyIcon from "@material-ui/icons/SportsHockey";
 import SportsFootballIcon from "@material-ui/icons/SportsFootball";
 import Header from "./Header";
+import Tweet from "./Tweet";
 import axios from "axios";
 import "./Random.css";
 
 const Random = () => {
-  const [screenName, setScreenName] = useState("");
+  const [screenName, setScreenName] = useState([]);
 
   const iconStyle = {
     color: "var(--primary)",
@@ -23,18 +24,29 @@ const Random = () => {
     e.preventDefault();
     const { name } = e.target;
 
-    setScreenName({ screenName: name });
+    console.log(name);
 
     axios
-      .get(`/api/random?screen_name=${screenName}`)
-      .then(response => {
-        setScreenName({ screenName: response.data });
-      })
+      .get(`/api/random?screen_name=${name}`)
+      .then(response => setScreenName(response.data))
       .catch(error => {
         console.log(`Something is wrong: ${error}`);
       });
     console.log(screenName);
   };
+
+  let randomUserTweets = screenName.map(tweet => (
+    <Tweet
+      key={tweet.id}
+      created={tweet.created_at}
+      img={tweet.user.profile_image_url}
+      name={tweet.user.name}
+      screen_name={tweet.user.screen_name}
+      text={tweet.text}
+      retweet={tweet.retweet_count}
+      favorite={tweet.favorite_count}
+    />
+  ));
 
   return (
     <>
@@ -42,7 +54,7 @@ const Random = () => {
         <Header />
         <h1 className="random-header">Random Tweet Page</h1>
         <p className="random-header-p">
-          Click on the logo below to view a randomly selected tweet
+          Click search tweet button below to view a randomly selected tweets
         </p>
         <section>
           <div>
@@ -81,9 +93,7 @@ const Random = () => {
             </button>
           </div>
         </section>
-        <div className="tweet-card">
-          <p>Tweets go here</p>
-        </div>
+        <div className="tweet-card">{randomUserTweets}</div>
       </div>
     </>
   );
