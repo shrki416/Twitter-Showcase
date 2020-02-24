@@ -13,7 +13,7 @@ const Tweet = props => {
 
   return (
     <div className="card">
-      <div className="profile-sidebar">
+      <div>
         <img className="profile-image" src={props.img} alt="user-image" />
       </div>
       <div className="tweet-body">
