@@ -31,6 +31,7 @@ class App extends Component {
               path="/random"
               render={props => <Random tweets={this.state.tweets} {...props} />}
             />
+            {/* <Route component={} /> */}
           </Switch>
         </Router>
       </>
