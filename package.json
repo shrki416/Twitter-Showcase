@@ -2,9 +2,6 @@
   "name": "twitter-showcase",
   "version": "1.0.0",
   "description": "A twitter showcase application",
-  "engines": {
-    "node": "13.2.0"
-  },
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
