@@ -24,15 +24,12 @@ const Random = () => {
     e.preventDefault();
     const { name } = e.target;
 
-    console.log(name);
-
     axios
       .get(`/api/random?screen_name=${name}`)
       .then(response => setScreenName(response.data))
       .catch(error => {
         console.log(`Something is wrong: ${error}`);
       });
-    console.log(screenName);
   };
 
   let randomUserTweets = screenName.map(tweet => (
@@ -50,51 +47,49 @@ const Random = () => {
 
   return (
     <>
-      <div className="random-container">
-        <Header />
-        <h1 className="random-header">Random Tweet Page</h1>
-        <p className="random-header-p">
-          Click search tweet button below to view a randomly selected tweets
-        </p>
-        <section>
-          <div>
-            <SportsBaseballIcon style={iconStyle} />
-            <p className="screen-name">@MLB</p>
-            <button id="random-btn" name="mlb" onClick={handleClick}>
-              Search Tweets
-            </button>
-          </div>
-          <div>
-            <SportsBasketballIcon style={iconStyle} />
-            <p className="screen-name">@NBA</p>
-            <button id="random-btn" name="nba" onClick={handleClick}>
-              Search Tweets
-            </button>
-          </div>
-          <div>
-            <SportsSoccerIcon style={iconStyle} />
-            <p className="screen-name">@MLS</p>
-            <button id="random-btn" name="mls" onClick={handleClick}>
-              Search Tweets
-            </button>
-          </div>
-          <div>
-            <SportsFootballIcon style={iconStyle} />
-            <p className="screen-name">@NFL</p>
-            <button id="random-btn" name="nfl" onClick={handleClick}>
-              Search Tweets
-            </button>
-          </div>
-          <div>
-            <SportsHockeyIcon style={iconStyle} />
-            <p className="screen-name">@NHL</p>
-            <button id="random-btn" name="nhl" onClick={handleClick}>
-              Search Tweets
-            </button>
-          </div>
-        </section>
-        <div className="tweet-card">{randomUserTweets}</div>
-      </div>
+      <Header />
+      <h1 className="random-header">Random Tweet Page</h1>
+      <p className="random-header-p">
+        Click search tweet button below to view a randomly selected tweets
+      </p>
+      <section>
+        <div>
+          <SportsBaseballIcon style={iconStyle} />
+          <p className="screen-name">@MLB</p>
+          <button id="random-btn" name="mlb" onClick={handleClick}>
+            Search Tweets
+          </button>
+        </div>
+        <div>
+          <SportsBasketballIcon style={iconStyle} />
+          <p className="screen-name">@NBA</p>
+          <button id="random-btn" name="nba" onClick={handleClick}>
+            Search Tweets
+          </button>
+        </div>
+        <div>
+          <SportsSoccerIcon style={iconStyle} />
+          <p className="screen-name">@MLS</p>
+          <button id="random-btn" name="mls" onClick={handleClick}>
+            Search Tweets
+          </button>
+        </div>
+        <div>
+          <SportsFootballIcon style={iconStyle} />
+          <p className="screen-name">@NFL</p>
+          <button id="random-btn" name="nfl" onClick={handleClick}>
+            Search Tweets
+          </button>
+        </div>
+        <div>
+          <SportsHockeyIcon style={iconStyle} />
+          <p className="screen-name">@NHL</p>
+          <button id="random-btn" name="nhl" onClick={handleClick}>
+            Search Tweets
+          </button>
+        </div>
+      </section>
+      <div className="tweet-card">{randomUserTweets}</div>
     </>
   );
 };

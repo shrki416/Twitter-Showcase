@@ -48,26 +48,24 @@ class Search extends Component {
 
     return (
       <>
-        <div className="search-container">
-          <Header />
-          <h1 className="search-header">Search Tweet Page</h1>
-          <p className="search-header-p">
-            Search twitter by either a twitter-handle or a topic
-          </p>
-          <div className="search-page">
-            <form className="form">
-              <input
-                type="text"
-                placeholder="Enter a twitter username"
-                onChange={this.handleChange}
-              />
-              <button onClick={this.handleClick}>
-                Search <i className="fab fa-twitter"></i>
-              </button>
-            </form>
-          </div>
-          <div className="tweet-card">{displayTweetCards}</div>
+        <Header />
+        <h1 className="search-header">Search Tweet Page</h1>
+        <p className="search-header-p">
+          Search twitter by either a twitter-handle or a topic
+        </p>
+        <div className="search-page">
+          <form className="form">
+            <input
+              type="text"
+              placeholder="Enter a twitter username"
+              onChange={this.handleChange}
+            />
+            <button onClick={this.handleClick}>
+              Search <i className="fab fa-twitter"></i>
+            </button>
+          </form>
         </div>
+        <div className="tweet-card">{displayTweetCards}</div>
       </>
     );
   }
