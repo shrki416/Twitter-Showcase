@@ -4,7 +4,7 @@
   "description": "A twitter showcase application",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "dev": "concurrently \"nodemon server.js\" \"npm run watch --prefix client\""
   },
   "repository": {
