@@ -5,11 +5,11 @@
   font-weight: 400;
   line-height: 1.5em;
   color: var(--primary);
-  font-family: "Nova Flat", sans-serif;
+  font-family: var(--ff-accent);
 }
 
 .search-header-p {
-  font-family: "Inconsolata", sans-serif;
+  font-family: var(--ff-main);
   color: var(--primary);
   font-size: 1.125em;
   text-align: center;
@@ -30,7 +30,7 @@
 }
 
 .form input {
-  font-family: "Nova Flat", sans-serif;
+  font-family: var(--ff-accent);
   outline: 0;
   background: var(--form-bg);
   width: 100%;
@@ -41,7 +41,7 @@
 }
 
 .form button {
-  font-family: "Nova Flat", sans-serif;
+  font-family: var(--ff-accent);
   background: var(--primary);
   width: 100%;
   border: 0;

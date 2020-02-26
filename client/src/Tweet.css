@@ -2,7 +2,7 @@
   box-shadow: 0 0 20px rgba(56, 161, 243, 0.5);
   width: 80%;
   max-width: 400px;
-  background-color: #222f3e;
+  background-color: var(--page-bg);
   border: 2px solid var(--primary);
   color: var(--primary);
   text-align: left;
@@ -31,7 +31,7 @@
 .user-name {
   margin-top: 0px;
   margin-bottom: 5px;
-  font-family: "Nova Flat";
+  font-family: var(--ff-accent);
 }
 
 .user-screen-name,

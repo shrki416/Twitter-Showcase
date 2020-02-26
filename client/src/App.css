@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Nova+Flat");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Nova+Flat&display=swap");
 
 *,
 *::before,
@@ -13,12 +12,14 @@
   --dark: #000;
   --form-bg: #d2dae2;
   --page-bg: #222f3e;
+  --ff-main: "Inconsolata", sans-serif;
+  --ff-accent: "Nova Flat", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inconsolata", sans-serif;
+  font-family: var(--ff-main);
   background: var(--page-bg);
   height: 100%;
 }
@@ -28,7 +29,7 @@ body {
 }
 
 .navbar {
-  font-family: "Nova Flat";
+  font-family: var(--ff-accent);
   font-size: 2rem;
   background: var(--primary);
   padding-bottom: 5px;
@@ -121,7 +122,7 @@ body {
 }
 
 .cover h1 {
-  font-family: "Nova Flat";
+  font-family: var(--ff-main);
   background: rgb(0, 0, 0, 0.8);
   color: var(--primary);
   padding: 16px;
