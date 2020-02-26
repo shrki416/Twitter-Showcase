@@ -8,7 +8,7 @@ const API_SECRET_KEY = process.env.API_SECRET_KEY;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
