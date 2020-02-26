@@ -1,6 +1,7 @@
 .random-container {
   background-color: #222f3e;
   background-size: cover;
+  display: grid;
   height: 100%;
   width: 100%;
 }

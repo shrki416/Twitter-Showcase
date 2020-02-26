@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import "./Search.css";
 import axios from "axios";
 import Tweet from "./Tweet";
+import "./Search.css";
 
 class Search extends Component {
   constructor() {

@@ -19,8 +19,7 @@ body {
   padding: 0;
   font-family: "Inconsolata", sans-serif;
   background: var(--background);
-  min-height: 100vh;
-  display: grid;
+  height: 100%;
 }
 
 .container {
