@@ -29,5 +29,8 @@
     "concurrently": "^5.0.1",
     "cra-build-watch": "^3.0.0",
     "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": "13.2.0"
   }
 }
