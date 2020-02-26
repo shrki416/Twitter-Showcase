@@ -4,8 +4,8 @@
   "description": "A twitter showcase application",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "dev": "concurrently \"nodemon server.js\" \"npm run watch --prefix client\""
+    "start": "node server.js",
+    "dev": "concurrently \"node server.js\" \"npm run watch --prefix client\""
   },
   "repository": {
     "type": "git",
