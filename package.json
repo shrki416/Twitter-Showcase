@@ -4,6 +4,7 @@
   "description": "A twitter showcase application",
   "main": "server.js",
   "scripts": {
+    "heroku-prebuild": "npm install && npm i --prefix client && npm run build --prefix client",
     "start": "nodemon server.js",
     "dev": "concurrently \"nodemon server.js\" \"npm run watch --prefix client\""
   },
