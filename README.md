@@ -24,4 +24,4 @@ This application was a lot of fun to build. It challenged my in many ways. I'm s
 
 ### Author
 
-- Ahmed Abdelaal - [Website]() | [LinkedIn]()
+- Ahmed Abdelaal - [Website]() | [LinkedIn](https://www.linkedin.com/in/ahmed-abdelaal-b0b26366/)
