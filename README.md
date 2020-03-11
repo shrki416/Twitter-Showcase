@@ -18,11 +18,13 @@ Checkout the project [HERE](https://frozen-dusk-41164.herokuapp.com/)
 
 ## Instruction & How to use this app
 
-1. cd into the root directory in the terminal
-2. Run `npm i` command
-3. cd into client folder and run `npm i` command
-4. cd back to root directory and run `npm run dev`
-5. open app in browser on `localhost:3000`
+1. cd into the root directory in your terminal
+2. Run `touch .env`
+   2a. put in your API_Key & API_SECRET_KEY (follow sample file `.env_sample`)
+3. Run `npm i` command
+4. cd into client folder and run `npm i` command
+5. cd back to root directory and run `npm run dev`
+6. open app in browser on `localhost:3000`
 
 ---
 
