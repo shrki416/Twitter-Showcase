@@ -1,23 +1,27 @@
 const express = require("express");
 const axios = require("axios");
 const path = require("path");
-
+const tokenService = require("./token-service");
 require("dotenv").config();
-const API_KEY = process.env.API_KEY;
-const API_SECRET_KEY = process.env.API_SECRET_KEY;
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get("/api/search", (req, res) => {
-  const url = `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.search_term}&count=6&result_type=popular`;
+app.get("/api/search", async (req, res) => {
+  const url = `https://api.twitter.com/1.1/search/tweets.json?`;
+
+  const token = await tokenService.getToken();
 
   const config = {
     headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      q: req.query.search_term,
+      count: 6,
+      result_type: "popular"
     }
   };
   axios
@@ -31,12 +35,18 @@ app.get("/api/search", (req, res) => {
     });
 });
 
-app.get("/api/random", (req, res) => {
-  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${req.query.screen_name}&count=6`;
+app.get("/api/random", async (req, res) => {
+  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?`;
+
+  const token = await tokenService.getToken();
 
   const config = {
     headers: {
-      Authorization: `Bearer ${ACCESS_TOKEN}`
+      Authorization: `Bearer ${token}`
+    },
+    params: {
+      screen_name: req.query.screen_name,
+      count: 6
     }
   };
   axios
