@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/search", async (req, res) => {
-  const url = `https://api.twitter.com/1.1/search/tweets.json?`;
+  const url = `https://api.twitter.com/1.1/search/tweets.json`;
 
   const token = await tokenService.getToken();
 
@@ -36,7 +36,7 @@ app.get("/api/search", async (req, res) => {
 });
 
 app.get("/api/random", async (req, res) => {
-  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?`;
+  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json`;
 
   const token = await tokenService.getToken();
 
