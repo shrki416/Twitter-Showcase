@@ -20,11 +20,11 @@ Checkout the project [HERE](https://frozen-dusk-41164.herokuapp.com/)
 
 1. cd into the root directory in your terminal
 2. Run `touch .env`
-   2a. put in your API_Key & API_SECRET_KEY (follow sample file `.env_sample`)
-3. Run `npm i` command
-4. cd into client folder and run `npm i` command
-5. cd back to root directory and run `npm run dev`
-6. open app in browser on `localhost:3000`
+3. put in your API_Key & API_SECRET_KEY (follow sample file `.env_sample`)
+4. Run `npm i` command
+5. cd into client folder and run `npm i` command
+6. cd back to root directory and run `npm run dev`
+7. open app in browser on `localhost:3000`
 
 ---
 
