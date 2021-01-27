@@ -2,7 +2,7 @@
 
 Twitter Showcase App is built with React and Node. It utilizes Twitter's APIs to allow users to search recent tweets of their favorite users.
 
-Checkout the project [HERE](https://frozen-dusk-41164.herokuapp.com/)
+Checkout the project [HERE](https://safe-oasis-61793.herokuapp.com/)
 
 ![Application Screenshots](client/src/assets/twitter-showcase-images.jpg)
 
