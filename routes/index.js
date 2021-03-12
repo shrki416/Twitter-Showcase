@@ -1,5 +1,5 @@
 const express = require("express");
-const axios = require("axios");
+const axios = require("axios").default;
 const router = express.Router();
 const tokenService = require("../controllers/token-service");
 
@@ -10,15 +10,8 @@ router.get("/search", async (req, res) => {
 
   await tokenService.getToken();
 
-  const config = {
-    params: {
-      q: req.query.search_term,
-      count: 6,
-      result_type: "popular",
-    },
-  };
   axios
-    .get(url, config)
+    .get(`${url}?q=${req.query.search_term}&count=6&result_type=popular`)
     .then((response) => res.send(response.data))
     .catch((error) => {
       console.log(`Something went wrong: ${error}`);
@@ -31,14 +24,8 @@ router.get("/random", async (req, res) => {
 
   await tokenService.getToken();
 
-  const config = {
-    params: {
-      screen_name: req.query.screen_name,
-      count: 6,
-    },
-  };
   axios
-    .get(url, config)
+    .get(`${url}?screen_name=${req.query.screen_name}&count=6`)
     .then((response) => res.send(response.data))
     .catch((error) => {
       console.log(`Something went wrong: ${error}`);
