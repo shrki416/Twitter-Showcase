@@ -11,28 +11,30 @@ import "./Random.css";
 
 const Random = () => {
   const [screenName, setScreenName] = useState([]);
+  console.log(screenName);
 
   const iconStyle = {
     color: "var(--primary)",
     fontSize: "100px",
     border: "2px solid var(--primary)",
     borderRadius: "10px",
-    margin: "2%"
+    margin: "2%",
   };
 
-  const handleClick = e => {
+  const handleClick = (e) => {
+    console.log(e.target);
     e.preventDefault();
     const { name } = e.target;
 
     axios
       .get(`/api/random?screen_name=${name}`)
-      .then(response => setScreenName(response.data))
-      .catch(error => {
+      .then((response) => setScreenName(response.data))
+      .catch((error) => {
         console.log(`Something is wrong: ${error}`);
       });
   };
 
-  let randomUserTweets = screenName.map(tweet => (
+  let randomUserTweets = screenName.map((tweet) => (
     <Tweet
       key={tweet.id}
       created={tweet.created_at}
