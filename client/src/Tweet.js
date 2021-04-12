@@ -1,12 +1,12 @@
 import React from "react";
 import "./Tweet.css";
 
-const Tweet = props => {
-  const date = new Date(props.created);
+const Tweet = ({ tweet }) => {
+  const date = new Date(tweet.created_at);
 
   const options = {
     hour: "numeric",
-    minute: "numeric"
+    minute: "numeric",
   };
   const newDateFormat = Intl.DateTimeFormat("en-US").format(date);
   const newTimeFormat = Intl.DateTimeFormat("en-US", options).format(date);
@@ -14,21 +14,25 @@ const Tweet = props => {
   return (
     <div className="card">
       <div>
-        <img className="profile-image" src={props.img} alt="user-image" />
+        <img
+          className="profile-image"
+          src={tweet.user.profile_image_url}
+          alt="user-image"
+        />
       </div>
       <div className="tweet-body">
-        <h2 className="user-name">{props.name}</h2>
-        <p className="user-screen-name">@{props.screen_name}</p>
+        <h2 className="user-name">{tweet.user.name}</h2>
+        <p className="user-screen-name">@{tweet.user.screen_name}</p>
         <p className="tweet-time-stamp">
           {newDateFormat} - {newTimeFormat}
         </p>
-        <p className="tweet-text">{props.text}</p>
+        <p className="tweet-text">{tweet.text}</p>
         <div className="tweet-stats">
           <p>
-            <i className="fas fa-retweet"></i> {props.retweet}
+            <i className="fas fa-retweet"></i> {tweet.retweet_count}
           </p>
           <p>
-            <i className="fas fa-heart"></i> {props.favorite}
+            <i className="fas fa-heart"></i> {tweet.favorite_count}
           </p>
         </div>
       </div>

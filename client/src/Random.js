@@ -11,7 +11,6 @@ import "./Random.css";
 
 const Random = () => {
   const [screenName, setScreenName] = useState([]);
-  console.log(screenName);
 
   const iconStyle = {
     color: "var(--primary)",
@@ -22,7 +21,6 @@ const Random = () => {
   };
 
   const handleClick = (e) => {
-    console.log(e.target);
     e.preventDefault();
     const { name } = e.target;
 
@@ -35,16 +33,7 @@ const Random = () => {
   };
 
   let randomUserTweets = screenName.map((tweet) => (
-    <Tweet
-      key={tweet.id}
-      created={tweet.created_at}
-      img={tweet.user.profile_image_url}
-      name={tweet.user.name}
-      screen_name={tweet.user.screen_name}
-      text={tweet.text}
-      retweet={tweet.retweet_count}
-      favorite={tweet.favorite_count}
-    />
+    <Tweet key={tweet.id} tweet={tweet} />
   ));
 
   return (

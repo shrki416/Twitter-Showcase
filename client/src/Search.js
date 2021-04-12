@@ -9,41 +9,26 @@ class Search extends Component {
     super();
     this.state = {
       tweets: [],
-      searchTerm: ""
+      searchTerm: "",
     };
   }
 
-  handleClick = e => {
+  handleClick = (e) => {
     e.preventDefault();
     axios
       .get(`/api/search?search_term=${this.state.searchTerm}`)
-      .then(response => {
-        this.setState({ tweets: response.data });
-      })
-      .catch(error => {
-        console.log(`Something is wrong: ${error}`);
-      });
+      .then((response) => this.setState({ tweets: response.data }))
+      .catch((error) => console.log(`Something is wrong: ${error}`));
   };
 
-  handleChange = e => {
-    this.setState({ searchTerm: e.target.value });
-  };
+  handleChange = (e) => this.setState({ searchTerm: e.target.value });
 
   render() {
     let { tweets } = this.state;
     const tweetData = tweets.statuses || [];
 
-    let displayTweetCards = tweetData.map(tweet => (
-      <Tweet
-        key={tweet.id}
-        created={tweet.created_at}
-        img={tweet.user.profile_image_url}
-        name={tweet.user.name}
-        screen_name={tweet.user.screen_name}
-        text={tweet.text}
-        retweet={tweet.retweet_count}
-        favorite={tweet.favorite_count}
-      />
+    let displayTweetCards = tweetData.map((tweet) => (
+      <Tweet key={tweet.id} tweet={tweet} />
     ));
 
     return (
