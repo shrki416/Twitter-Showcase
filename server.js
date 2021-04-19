@@ -8,8 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
-const apiRoutes = require("./routes");
-app.use("/api", apiRoutes);
+app.use("/api", require("./routes"));
 
 app.get("/*", (req, res) =>
   res.sendFile(path.join(__dirname, "client", "build", "index.html"))
