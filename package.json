@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/shrki416/Twitter-Showcase#readme",
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
+    "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
-    "concurrently": "^6.0.1",
+    "concurrently": "^6.1.0",
     "cra-build-watch": "^3.4.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7"
