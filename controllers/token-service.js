@@ -2,6 +2,7 @@ const axios = require("axios");
 require("dotenv").config();
 
 let bearer;
+const URL = `https://api.twitter.com/oauth2/token`;
 
 const getToken = () => {
   if (bearer) return bearer;
@@ -17,11 +18,7 @@ const getToken = () => {
   };
 
   return axios
-    .post(
-      "https://api.twitter.com/oauth2/token",
-      "grant_type=client_credentials",
-      config
-    )
+    .post(URL, "grant_type=client_credentials", config)
     .then((response) => {
       axios.defaults.headers.common = {
         Authorization: `Bearer ${response.data.access_token}`,

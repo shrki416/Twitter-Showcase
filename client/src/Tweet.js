@@ -8,6 +8,7 @@ const Tweet = ({ tweet }) => {
     hour: "numeric",
     minute: "numeric",
   };
+
   const newDateFormat = Intl.DateTimeFormat("en-US").format(date);
   const newTimeFormat = Intl.DateTimeFormat("en-US", options).format(date);
 
