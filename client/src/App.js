@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./Home";
-import Search from "./Search";
-import Random from "./Random";
+import Home from "./Pages/Home";
+import Search from "./Pages/Search";
+import Random from "./Pages/Random";
 
 const App = () => {
   return (
