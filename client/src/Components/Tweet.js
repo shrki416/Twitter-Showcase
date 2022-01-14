@@ -1,5 +1,8 @@
-import React from "react";
 import "../Styles/Tweet.css";
+
+import { FaHeart, FaRetweet } from "react-icons/fa";
+
+import React from "react";
 
 const Tweet = ({ tweet }) => {
   const date = new Date(tweet.created_at);
@@ -30,10 +33,10 @@ const Tweet = ({ tweet }) => {
         <p className="tweet-text">{tweet.text}</p>
         <div className="tweet-stats">
           <p>
-            <i className="fas fa-retweet"></i> {tweet.retweet_count}
+            <FaRetweet /> {tweet.retweet_count}
           </p>
           <p>
-            <i className="fas fa-heart"></i> {tweet.favorite_count}
+            <FaHeart /> {tweet.favorite_count}
           </p>
         </div>
       </div>
