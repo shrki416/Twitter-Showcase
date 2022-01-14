@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Home from "./Pages/Home";
-import Search from "./Pages/Search";
 import Random from "./Pages/Random";
+import React from "react";
+import Search from "./Pages/Search";
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/random" component={Random} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/search" element={<Search />} />
+        <Route exact path="/random" element={<Random />} />
+      </Routes>
     </Router>
   );
 };
