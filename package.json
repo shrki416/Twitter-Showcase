@@ -1,29 +1,28 @@
 {
   "name": "twitter-showcase",
   "version": "1.0.0",
-  "description": "A twitter showcase application",
-  "main": "server.js",
+  "description": "Twitter Showcase App is built with React and Node. It utilizes Twitter's APIs to allow users to search recent tweets of their favorite users.",
+  "main": "index.js",
   "scripts": {
     "heroku-prebuild": "npm install && npm i --prefix client && npm run build --prefix client",
-    "start": "nodemon server.js",
-    "dev": "concurrently \"npm run start\" \"npm run watch --prefix client\""
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix server",
+    "client": "npm run start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm run start --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shrki416/Twitter-Showcase.git"
   },
-  "author": "AA",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shrki416/Twitter-Showcase/issues"
   },
-  "homepage": "https://github.com/shrki416/Twitter-Showcase#readme",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "concurrently": "^7.0.0",
-    "dotenv": "^11.0.0",
-    "express": "^4.17.3",
-    "nodemon": "^2.0.20",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/shrki416/Twitter-Showcase#readme"
 }
